@@ -1,0 +1,58 @@
+use collegeDB;
+go
+drop table if exists emp_name;
+create table emp_name(
+ age int,
+ department nvarchar(100),
+ salary int ,
+ email nvarchar(100)
+ );
+
+ create table course(
+  course_id int ,
+  course_name nvarchar(100),
+  credit  int,
+  fees   decimal(5,2)
+  );
+
+  create table teacher_data(
+    department nvarchar(50),
+    salary nvarchar
+    );
+    --add phone 
+    alter table emp_name
+    add phone nvarchar(100);
+    GO
+    --change
+    alter table emp_name
+    alter column email varchar(20);
+    GO
+    --add grade
+    ALTER TABLE enrollment
+    ADD grade NVARCHAR(20);
+    go
+
+    --change credits to credit hours
+   EXEC sp_rename 'course.credit' ,'credithours','column';
+
+   --drop phone 
+   alter table emp_name
+   drop column phone;
+   GO
+
+   --temporary table 
+   CREATE TABLE testTable(
+   id int,
+   name nvarchar(20)
+   );
+   go
+
+   drop table if exists testTable;
+  GO
+  --drop table 
+  DROP TABLE teacher_data;
+  GO
+  --DROP COLUMN 
+  ALTER TABLE emp_name
+  drop column department 
+  GO

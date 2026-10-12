@@ -1,0 +1,16 @@
+CREATE TABLE student_data(
+student_id int,
+NAME   nvarchar(70),
+city  varchar(30),
+course varchar(100),
+marks int ,
+age int );
+
+INSERT into student_data values
+(1,'anamta','newyork','mca','600',22),
+(2,'sara','newyork','mca','880',23),
+(3,'ahmed','newyork','mca','650',26),
+(4,'rahul','newyork','mca','700',29),
+(5,'yug','newyork','mca','960',20);
+
+select * from student_data;

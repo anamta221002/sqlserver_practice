@@ -1,0 +1,19 @@
+use collegeDB;
+go
+create table emp_name(
+ age int,
+ department nvarchar(100),
+ salary int ,
+ email nvarchar(100)
+ );
+
+ create table course(
+  course_id int ,
+  course_name nvarchar(100),
+  fees   decimal(5,2)
+  );
+
+  create table teacher_data(
+    department nvarchar(50),
+    salary nvarchar
+    );
